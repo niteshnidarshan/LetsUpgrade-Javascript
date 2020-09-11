@@ -1,0 +1,48 @@
+Jai Ram G ki
+-----------------
+
+Object - collection of properties(features that it has) & methods(work that it has).
+properties - variables
+methods - functions/ behavioural
+
+window - super class - window is an parent object provided by javascript which is the parent of all object.
+
+console - a child object of window.
+
+window.console.log("Hello World!");
+
+window.alert(); //popup to show message
+or 
+alert(); 
+
+window.prompt()//to take input from user.
+let name = prompt("Enter name");
+console.log(name); 
+
+window.confirm();
+let answer = confirm("Do you want to go to Google?");
+console.log(answer); //true/false
+if(answer == false){
+	console.log("Try others!");
+}
+else{
+	window.location="https://www.google.co.in";	 
+}
+
+
+// Day_4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

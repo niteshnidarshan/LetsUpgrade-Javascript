@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="assignment_day_4_solution.js"></script>
+</head>
+<body>
+    <div style="color: red;">
+    <h4>
+        Question 1 : Create a webpage containing an image and three buttons
+    </h4>
+    <ul>
+        <li>
+            A. On click of the second button a change the existing image to a new image
+        </li>
+        <li>
+            B. On click of the third button change it once again
+        </li>
+        <li>
+            C. On click of first, the first image should come back
+        </li>
+    </ul>
+    </div>
+    <h4>Solution :</h4>
+    <img id="sol_1" src="/movie_poster/don.jpeg" width="150px">
+    <div style="margin-top: 10px;">
+        <button id="btn_1" onclick="myImage()">1 - My Image</button>
+        <button id="btn_2" onclick="changeImage()">2 - Change Image</button>
+        <button id="btn_3" onclick="againChangeImage()">3 - Again Change Image</button>
+    </div>
+
+    <div style="color: red;">
+        <h4>
+            Question 2 : Create a webpage containing two input fields and a button.
+        </h4>
+        <ul>
+            <li>
+                A. Write something in the first input
+            </li>
+            <li>
+                B. On click of the button, the content of input one should be copied in the second input
+            </li>
+        </ul>
+    </div>
+        <h4>Solution :</h4>
+        <input type="text" id="source" placeholder="Write something ..." ><br>
+        <input type="text" id="target" ><br>
+        <button id="copy" onclick="copyText()">Copy</button>
+
+        <div style="color: red;">
+            <h4>
+                Question 3 : Create an array of objects with objects having the following properties
+            </h4>
+            <ul>
+                <li>
+                    A. {name(string), age(number), country(string), hobbies array(string[])}
+                </li>
+                <li>
+                    B. Write a function to display all the objects on the console.
+                </li>
+            </ul>
+        </div>
+            <h4>Solution :</h4>
+            <p>1) Press F12 - to show console</p>
+            <p>1) click on the button - to show all all the objects</p>
+           
+            <button id="all-objects" onclick="showAllObjects()">Show all objects</button>
+           
+           
+            <div style="color: red;">
+                <h4>
+                    Question 4 : Following the 3rd question
+                </h4>
+                <ul>
+                    <li>
+                        A. Write a function to display all the objects having age less than 30
+                    </li>
+                    <li>
+                        B. Write a function to display all the objects having country India
+                    </li>
+                </ul>
+            </div>
+                <h4>Solution :</h4>
+                <button id="show-age" onclick="showAgeObj()">show age > 30</button>
+                <button id="show-country" onclick="showIndiaObj()">Show country - India</button>
+
+
+                <br><br><br>
+</body>
+</html>
