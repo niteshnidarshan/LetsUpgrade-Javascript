@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD operation in javascript</title>
+    
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .data {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 500px;
+            width: 80%;
+            /* background-color: rgb(224, 231, 231); */
+            margin-left: 10%;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        .table {
+            width: 100%;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        th, td {
+            height: 40px;
+            text-align: center;
+            padding: 5px;
+        }
+        .form {
+            margin-top: 20px;
+            padding: 20px;
+        }
+        input {
+            height: 40px;
+            text-indent: 20px;
+        }
+
+        .modal {
+            width: 100%;
+            height: 100vh; /*vh = viewport height - what we see in complete brwoser from top to button*/
+            background-color: rgb(0, 0, 0, 0.5); /*rgba - where a defines alpha used to define tranperency*/
+            position: fixed; /*Not to impact other elements & make the div fixed*/
+            display: none;
+        }
+        .modalChild {
+            height: 200px;
+            width: 70%;
+            background-color: white;
+            margin-left: 15%;
+            margin-top: 100px;
+            display: inline-block;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--pop up - modal-->
+    <div class="modal" onclick="hideModal(event)">
+        <!--event bubbling = every parent event/property propogates child event/property also-->
+        <div class="modalChild">
+            <div class="form">
+                <form onsubmit="updateSuperHero(event)">
+                    <input type="text" placeholder="Name" id = "upd_name" required/>
+                    <input type="number" placeholder="Age" id = "upd_age" required/>
+                    <input type="text" placeholder="Planet" id = "upd_planet" required/>
+                    <input type="text" placeholder="Height" id = "upd_height" required/>
+                    
+                    <button type="submit">Update Superhero</button> 
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!--'event' must be a first argument in the function & name must be 'event'-->
+    <!--'event' is an inbuilt object-->
+    <!--<button onclick="showModal(event)">Click Me</button>-->
+
+    <div class="data">
+        <h1>Super Hero</h1>
+
+        <div class="form">
+            <form onsubmit="addSuperHero(event)">
+                <input type="text" placeholder="Name" id = "name" required/>
+                <input type="number" placeholder="Age" id = "age" required/>
+                <input type="text" placeholder="Planet" id = "planet" required/>
+                <input type="text" placeholder="Height" id = "height" required/>
+                <button type="submit">Add Superhero</button> 
+            </form>
+        </div>
+
+        <div class="form">
+            <input id="searchName" type="text" placeholder="Search" onkeyup="searchByName()" />
+        </div>
+
+        <table border="1" class="table" cellspacing=0>
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Planet</th>
+                    <th>Height</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="tdata">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    
+
+
+    <script src="project.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>

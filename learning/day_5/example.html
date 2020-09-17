@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .modal {
+            width: 100%;
+            height: 100vh; /*vh = viewport height - what we see in complete brwoser from top to button*/
+            background-color: rgb(0, 0, 0, 0.5); /*rgba - where a defines alpha used to define tranperency*/
+            position: fixed; /*Not to impact other elements & make the div fixed*/
+            display: none;
+        }
+        .modalChild {
+            height: 500px;
+            width: 70%;
+            background-color: white;
+            margin-left: 15%;
+            margin-top: 100px;
+            display: inline-block;
+        }
+        button {
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <!--pop up - modal-->
+    <div class="modal" onclick="hideModal(event)">
+        <!--event bubbling = every parent event/property propogates child event/property also-->
+        <div class="modalChild"></div>
+
+    </div>
+
+    <!--'event' must be a first argument in the function & name must be 'event'-->
+    <!--'event' is an inbuilt object-->
+    <button onclick="showModal(event)">Click Me</button>
+
+    <script src="modal.js"></script>
+</body>
+</html>

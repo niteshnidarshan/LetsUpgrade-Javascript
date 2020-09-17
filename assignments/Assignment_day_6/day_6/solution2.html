@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD operation in javascript</title>
+    
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .data {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 500px;
+            width: 80%;
+            /* background-color: rgb(224, 231, 231); */
+            margin-left: 10%;
+            margin-top: 5px;
+            padding: 20px;
+        }
+        .table {
+            width: 100%;
+            margin-top: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        th, td {
+            height: 40px;
+            text-align: center;
+            padding: 5px;
+        }
+        .form {
+            margin-top: 10px;
+            padding: 20px;
+        }
+        input {
+            height: 40px;
+            width: 300px;
+            text-indent: 20px;
+        } 
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body> 
+    <!--'event' must be a first argument in the function & name must be 'event'-->
+    <!--'event' is an inbuilt object-->
+    <!--<button onclick="showModal(event)">Click Me</button>-->
+
+    <div class="data"> 
+        <h1>Solution 2</h1>
+        <hr>
+        <div class="form">
+            <form onsubmit="addBus(event)">
+                <input type="text" placeholder="Bus Name" id = "bus_name" required/>
+                <input type="text" placeholder="Source" id = "source" required/>
+                <input type="text" placeholder="Destination" id = "destination" required/>
+                <input type="text" placeholder="Bus#" id = "busNumber" required/>
+                <input type="text" placeholder="Passenger Capacity" id = "capacity" required/>
+                <button type="submit">Add Bus</button> 
+            </form>
+        </div>
+
+        <div class="form">
+            <input id="searchBus" type="text" placeholder="Search by Source or Destination"  onkeyup="searchBySource()" />
+        </div>
+
+        <table border="1" class="table" cellspacing=0>
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Bus Number</th>
+                    <th>Total Capacity</th>
+                </tr>
+            </thead>
+            <tbody class="bus_tdata">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr> -->
+            </tbody>
+        </table>
+        <br>
+        <br><br>
+        <hr>
+        <hr>
+
+    </div> 
+    <script src="solution2.js"></script> 
+</body>
+</html>

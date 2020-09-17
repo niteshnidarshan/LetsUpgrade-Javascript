@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <!--
+        browser storage
+        --------------------
+        1) localStorage - its browser's permanent storage, after closing browser also will contain data
+        2) sessionStorage - based on particular session - storage will be till the tab open, once close data will gone
+    -->
+    <script>
+        localStorage.setItem("name","Ram G");
+        console.log(localStorage.getItem("name"));
+    </script>
+</body>
+</html>
