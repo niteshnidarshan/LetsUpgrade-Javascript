@@ -30,9 +30,16 @@ else{
 }
 
 
-// Day_4
+// Day_7
+Timers - timers are basically a function which have ability to perform a task based on a time interval.
+	It has two types as 
+	1) setInterval - for infinity - executes again & again based on the time
+	2) setTimeout - executes only one.
 
 
+Ajax
+----------
+By default javascript is a single threaded language & it works as synchronous means everything gets executed line by line.
 
 
 
