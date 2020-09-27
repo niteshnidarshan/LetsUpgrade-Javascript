@@ -1,0 +1,129 @@
+/* Consider below for web design:
+1) Fluid grid : All layout elements are sized in relative unites, such as percentages, instead of absolute units like pixels.
+2) Flexible images : are also sized in relative unites
+3) Media queries : allows us to specify different CSS style rules for different browser widths. */
+
+/* ------------------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------ */
+.row {
+    max-width: 1140px;
+    /*margin: 0 auto 0 auto;*//*top right left bottom*/
+    margin: 0 auto;/*top & bottom will be 0 and left & right will be auto*/
+}
+
+/* -----------HEADING----------- */
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;/*relative to global html font size*/
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+/* -------BUTTONS--------- */
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;/* top-bottom & left-right*/
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    /*flat ui colors from web*/
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 16px;
+}
+.btn-next:link,
+.btn-next:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active { 
+    border: 1px solid #cf6d17; 
+}
+.btn-next:link,
+.btn-next:visited {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+/* ------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------ */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.705),rgba(0, 0, 0, 0.705)), url(/web_images/backgrond.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;/*means 100% of view image*/
+}
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 64px;
+}
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px; /* top-bottom & left-right */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /* 90% of 20px is 18px; 20px is defined golobally */
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
